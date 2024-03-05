@@ -1,23 +1,54 @@
+
+import Job from '../Logic/Job'
+import Villager from '../Logic/Villager'
+import VillageDetail from '../Components/VillageDetail'
+import VillagerJob from '../Components/VillagerJob'
+import { useState } from 'react'
+import Creature from '../Logic/Creature'
+import Creatures from '../Components/Creatures'
+
+
+
+
 export default function Game() {
 
+
+    const [villagers, setVillagersState] = useState([
+        new Villager("John", "Doe", 20, 100, 100, 100, 100, 100, 100, Job.Farmer, ["Strong", "Healthy", "Hardworking"]),
+        new Villager("Jane", "Doe", 20, 100, 100, 100, 100, 100, 100, Job.Soldier, ["Strong", "Healthy", "Hardworking"]),
+        new Villager("Jack", "Doe", 20, 100, 100, 100, 100, 100, 100, Job.Doctor, ["Strong", "Healthy", "Hardworking"]),
+        new Villager("Jill", "Doe", 20, 100, 100, 100, 100, 100, 100, Job.Unemployed, ["Strong", "Healthy", "Hardworking"])
+    ])
+
+    const [selectedVillager, setSelectedVillager] = useState(villagers[0])
+
+
+    const onVillagerChangeJob = (villager: Villager, job: Job) => {
+        villager.job = job
+        setVillagersState([...villagers])
+    }
+
+    const onSelectedVillagerChange = (villager: Villager) => {
+        setSelectedVillager(villager)
+    }
+
+
+    const [creatures, setCreatures] = useState([Creature.Snake, Creature.Orc, Creature.Goblin, Creature.Goblin])
+
     return (
-        <div className="flex flex-row items-center justify-center h-full">
-            <div className="flex flex-col items-center justify-center w-1/3 gap-12">
-                <p>Data</p>
-                <p>Food : 100</p>
-                <p>Nombre villageois : 10</p>
+        <div className="flex flex-row gap-12 p-2 h-full w-full">
+            <VillageDetail selectedVillager={selectedVillager} onChangeJob={onVillagerChangeJob} />
+            <div className="gap-12 h-full w-1/2">
+                {/* 4 zones, top left, top right, bottom left and bottom right */}
+                <div className="grid grid-cols-2 grid-rows-2 gap-4 h-full">
+                    <VillagerJob job={Job.Farmer} villagers={villagers} selectedVillager={selectedVillager} onChangeSelectedVillager={onSelectedVillagerChange} />
+                    <VillagerJob job={Job.Soldier} villagers={villagers} selectedVillager={selectedVillager} onChangeSelectedVillager={onSelectedVillagerChange} />
+                    <VillagerJob job={Job.Doctor} villagers={villagers} selectedVillager={selectedVillager} onChangeSelectedVillager={onSelectedVillagerChange} />
+                    <VillagerJob job={Job.Unemployed} villagers={villagers} selectedVillager={selectedVillager} onChangeSelectedVillager={onSelectedVillagerChange} />
+                </div>
             </div>
-            <div className="flex flex-col items-center justify-center gap-12 w-1/3">
-                <p>JOBS</p>
-                <p>Farmers : 10</p>
-                <p>Woodcutters : 10</p>
-                <p>Miners : 10</p>
-            </div>
-            <div className="flex flex-col items-center justify-center gap-12 w-1/3">
-                <p>Creatures</p>
-                <p>Wolves : 10</p>
-                <p>Bears : 10</p>
-                <p>Dragons : 10</p>
+            <div className="flex flex-col items-center justify-center gap-12 h-full w-1/4">
+                <Creatures creatures={creatures} />
             </div>
 
         </div>
