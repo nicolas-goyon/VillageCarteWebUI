@@ -1,6 +1,5 @@
 import Job from "../Logic/Job";
 import Villager from "../Logic/Villager";
-import farmer from "../assets/Card/Farmer.jfif";
 import VillagerCard from "./VillagerCard";
 import { v4 } from "uuid";
 

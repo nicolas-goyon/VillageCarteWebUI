@@ -23,4 +23,21 @@ export default class Job {
     static Soldier = new Job("Soldier", soldier);
     static Doctor = new Job("Doctor", doctor);
     static Unemployed = new Job("Unemployed", farmer);
+
+    static getJob(name: string) {
+        name = name.toLowerCase();
+        name = name.charAt(0).toUpperCase() + name.slice(1);
+        switch(name) {
+            case "Farmer":
+                return Job.Farmer;
+            case "Soldier":
+                return Job.Soldier;
+            case "Doctor":
+                return Job.Doctor;
+            case "Unemployed":
+                return Job.Unemployed;
+            default:
+                throw new Error("Job not found");
+        }
+    }
 }
