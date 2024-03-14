@@ -40,7 +40,7 @@ export default class Creature{
     }
 
 
-    static Goblin = new Creature("Goblin", Goblin, 10, 3);
-    static Orc = new Creature("Orc", Orc, 50, 20);
-    static Snake = new Creature("Snake", Snake, 5, 10);
+    static Goblin = () => new Creature("Goblin", Goblin, 10, 3);
+    static Orc = () => new Creature("Orc", Orc, 50, 20);
+    static Snake = () => new Creature("Snake", Snake, 5, 10);
 }

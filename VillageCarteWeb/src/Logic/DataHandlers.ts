@@ -92,19 +92,19 @@ export function newAttack(pasedData: { creatures: any }, creatureState: Creature
     const newCreaturesData = pasedData.creatures
     const newCreatures = newCreaturesData.map((creatureData: any) => {
         const imageString = creatureData.name.split("-")[0];
-        let creature = Creature.Goblin;
+        let creature = Creature.Goblin();
         switch (imageString) {
             case "Goblin":
-                creature = Creature.Goblin
+                creature = Creature.Goblin()
                 break;
             case "Orc":
-                creature = Creature.Orc
+                creature = Creature.Orc()
                 break;
             case "Snake":
-                creature = Creature.Snake
+                creature = Creature.Snake()
                 break;
             default:
-                creature = Creature.Goblin
+                creature = Creature.Goblin()
         }
         creature.name = creatureData.name
         return creature
@@ -172,14 +172,14 @@ export function handleAttackDamageCreatures(targets: any, creatureState: Creatur
     creatureState.setCreatures(newCreaturesFiltered)
 }
 
-export function healVillagers(pasedData: { guys: {name:string, surname: string, health:number}[] }, villagersState: VillagersState){
+export function healVillagers(pasedData: { guys: {name:string, surname: string, newHealth:number}[] }, villagersState: VillagersState){
     const guys = pasedData.guys
     // {name: string, surname: string, health: number}
     // Edit villager's health
     const newVillagers = villagersState.villagers.map((villager) => {
         const guy = guys.find((guy: any) => guy.name === villager.name && guy.surname === villager.surname)
         if (guy !== undefined) {
-            villager.health = guy.health
+            villager.health = guy.newHealth
         }
         return villager
     })

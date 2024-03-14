@@ -55,7 +55,7 @@ describe('DataHandlers', () => {
     test('newVillager event', () => {
         const villagersState = {
             villagers: [], setVillagers: (villagers: any) => {
-                expect(villagers).toEqual([{ name: "John", surname: "Doe", job: Job.Farmer, health: 100, age: 0, hunger: 100, baseHealth: 100, workForce: 1, magic: 0, strength: 0, caracteristics: [] }])
+                expect(villagers).toEqual([{ name: "John", surname: "Doe", job: Job.Farmer(), health: 100, age: 0, hunger: 100, baseHealth: 100, workForce: 1, magic: 0, strength: 0, caracteristics: [] }])
             }
         }
         const data = { eventType: "newVillager", newGuy: { name: "John", surname: "Doe", job: "Farmer", health: 100, age: 0, stomachSize: 100, baseHealth: 100, workingForce: 1, magic: 0, damage: 0, characteristic: [] } }
@@ -66,7 +66,7 @@ describe('DataHandlers', () => {
     test('newVillager', () => {
         const villagersState = {
             villagers: [], setVillagers: (villagers: any) => {
-                expect(villagers).toEqual([{ name: "John", surname: "Doe", job: Job.Farmer, health: 100, age: 0, hunger: 100, baseHealth: 100, workForce: 1, magic: 0, strength: 0, caracteristics: [] }])
+                expect(villagers).toEqual([{ name: "John", surname: "Doe", job: Job.Farmer(), health: 100, age: 0, hunger: 100, baseHealth: 100, workForce: 1, magic: 0, strength: 0, caracteristics: [] }])
             }
         }
         const data = { newGuy: { name: "John", surname: "Doe", job: "Farmer", health: 100, age: 0, stomachSize: 100, baseHealth: 100, workingForce: 1, magic: 0, damage: 0, characteristic: [] } }
@@ -77,7 +77,7 @@ describe('DataHandlers', () => {
     test('newAttack event', () => {
         const creatureState = {
             creatures: [], setCreatures: (creatures: any) => {
-                expect(creatures).toEqual([Creature.Goblin])
+                expect(creatures).toEqual([Creature.Goblin()])
             }
         }
         const data = { eventType: "newAttack", creatures: [{ name: "Goblin", health: 10, damage: 3 }] }
@@ -88,7 +88,7 @@ describe('DataHandlers', () => {
     test('newAttack', () => {
         const creatureState = {
             creatures: [], setCreatures: (creatures: any) => {
-                expect(creatures).toEqual([Creature.Goblin])
+                expect(creatures).toEqual([Creature.Goblin()])
             }
         }
         const data = { creatures: [{ name: "Goblin", health: 10, damage: 3 }] }
@@ -96,12 +96,28 @@ describe('DataHandlers', () => {
         expect(newAttack).toBe(undefined)
     });
 
+    test('newAttack : multiple creatures', () => {
+        const creatureState = {
+            creatures: [], setCreatures: (creatures: any) => {
+                const expected = [Creature.Goblin(), Creature.Goblin()]
+                expected[0].name = "Goblin-1"
+                expected[1].name = "Goblin-2"
+                console.log(creatures)
+                expect(creatures).toEqual(expected)
+            }
+        }
+        const data = { creatures: [{ name: "Goblin-1", health: 10, damage: 3 }, { name: "Goblin-2", health: 10, damage: 3 }] }
+        const newAttack = dh.newAttack(data, creatureState)
+        expect(newAttack).toBe(undefined)
+    });
+
+
     test('attackDamage event: Villager', () => {
-        const village = { villagers: [{ name: "John", surname: "Doe", job: Job.Farmer, health: 100, age: 0, hunger: 100, baseHealth: 100, workForce: 1, magic: 0, strength: 0, caracteristics: [] }] }
+        const village = { villagers: [{ name: "John", surname: "Doe", job: Job.Farmer(), health: 100, age: 0, hunger: 100, baseHealth: 100, workForce: 1, magic: 0, strength: 0, caracteristics: [] }] }
 
         const villagersState = {
             villagers: village.villagers, setVillagers: (villagers: any) => {
-                expect(villagers).toEqual([{ name: "John", surname: "Doe", job: Job.Farmer, health: 97, age: 0, hunger: 100, baseHealth: 100, workForce: 1, magic: 0, strength: 0, caracteristics: [] }])
+                expect(villagers).toEqual([{ name: "John", surname: "Doe", job: Job.Farmer(), health: 97, age: 0, hunger: 100, baseHealth: 100, workForce: 1, magic: 0, strength: 0, caracteristics: [] }])
             }
         }
 
@@ -111,10 +127,10 @@ describe('DataHandlers', () => {
     });
 
     test('attackDamage event: Creature', () => {
-        const expected = [Creature.Goblin]
+        const expected = [Creature.Goblin()]
         expected[0].health = 7
         const creaturesState = {
-            creatures: [Creature.Goblin], setCreatures: (creatures: any) => {
+            creatures: [Creature.Goblin()], setCreatures: (creatures: any) => {
                 expect(creatures).toEqual(expected)
             }
         }
@@ -124,15 +140,15 @@ describe('DataHandlers', () => {
     });
 
     test('healVillagers event', () => {
-        const village = { villagers: [{ name: "John", surname: "Doe", job: Job.Farmer, health: 100, age: 0, hunger: 100, baseHealth: 100, workForce: 1, magic: 0, strength: 0, caracteristics: [] }] }
+        const village = { villagers: [{ name: "John", surname: "Doe", job: Job.Farmer(), health: 100, age: 0, hunger: 100, baseHealth: 100, workForce: 1, magic: 0, strength: 0, caracteristics: [] }] }
 
         const villagersState = {
             villagers: village.villagers, setVillagers: (villagers: any) => {
-                expect(villagers).toEqual([{ name: "John", surname: "Doe", job: Job.Farmer, health: 100, age: 0, hunger: 100, baseHealth: 100, workForce: 1, magic: 0, strength: 0, caracteristics: [] }])
+                expect(villagers).toEqual([{ name: "John", surname: "Doe", job: Job.Farmer(), health: 100, age: 0, hunger: 100, baseHealth: 100, workForce: 1, magic: 0, strength: 0, caracteristics: [] }])
             }
         }
 
-        const data = { eventType: "healVillagers", guys: [{ name: "John", surname: "Doe", health: 100 }] }
+        const data = { eventType: "healVillagers", guys: [{ name: "John", surname: "Doe", newHealth: 100 }] }
         const event = new MessageEvent('message', { data: JSON.stringify(data) })
         dh.handleMessages(event, villagersState, { food: 0, setFood: (food: number) => { } }, { creatures: [], setCreatures: (creatures: any) => { } })
     });

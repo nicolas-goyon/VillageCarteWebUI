@@ -112,17 +112,17 @@ export default function VillagerDetail({ selectedVillager, onChangeJob }: Villag
 
             <div className="grid grid-cols-2 gap-2">
                 <button
-                    className={jobButtonClasses} disabled={selectedVillager.job.name === Job.Farmer.name} onClick={() => onChangeJob(selectedVillager, Job.Farmer)}>
-                    {Job.Farmer.name}
+                    className={jobButtonClasses} disabled={selectedVillager.job.name === Job.Farmer().name} onClick={() => onChangeJob(selectedVillager, Job.Farmer())}>
+                    {Job.Farmer().name}
                 </button>
-                <button className={jobButtonClasses} disabled={selectedVillager.job.name === Job.Soldier.name} onClick={() => onChangeJob(selectedVillager, Job.Soldier)}>
-                    {Job.Soldier.name}
+                <button className={jobButtonClasses} disabled={selectedVillager.job.name === Job.Soldier().name} onClick={() => onChangeJob(selectedVillager, Job.Soldier())}>
+                    {Job.Soldier().name}
                 </button>
-                <button className={jobButtonClasses} disabled={selectedVillager.job.name === Job.Doctor.name} onClick={() => onChangeJob(selectedVillager, Job.Doctor)}>
-                    {Job.Doctor.name}
+                <button className={jobButtonClasses} disabled={selectedVillager.job.name === Job.Doctor().name} onClick={() => onChangeJob(selectedVillager, Job.Doctor())}>
+                    {Job.Doctor().name}
                 </button>
-                <button className={jobButtonClasses} disabled={selectedVillager.job.name === Job.Unemployed.name} onClick={() => onChangeJob(selectedVillager, Job.Unemployed)}>
-                    {Job.Unemployed.name}
+                <button className={jobButtonClasses} disabled={selectedVillager.job.name === Job.Unemployed().name} onClick={() => onChangeJob(selectedVillager, Job.Unemployed())}>
+                    {Job.Unemployed().name}
                 </button>
             </div>
         </div>

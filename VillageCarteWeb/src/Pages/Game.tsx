@@ -34,6 +34,7 @@ export default function Game({ baseVillager, baseFood }: GameProps) {
     const [villagers, setVillagersState] = useState([baseVillager])
     const [food, setFood] = useState(baseFood)
     const [selectedVillager, setSelectedVillager] = useState(villagers[0])
+    const [creatures, setCreatures] = useState<Creature[]>([])
 
 
     const onVillagerChangeJob = (villager: Villager, job: Job) => {
@@ -49,19 +50,16 @@ export default function Game({ baseVillager, baseFood }: GameProps) {
         setSelectedVillager(villager)
     }
 
-
-    const [creatures, setCreatures] = useState<Creature[]>([])
-
     return (
         <div className="flex flex-row gap-12 p-2 h-full w-full">
             <VillageDetail selectedVillager={selectedVillager} onChangeJob={onVillagerChangeJob} food={food} numberOfVillagers={villagers.length} />
             <div className="gap-12 h-full w-1/2">
                 {/* 4 zones, top left, top right, bottom left and bottom right */}
                 <div className="grid grid-cols-2 grid-rows-2 gap-4 h-full">
-                    <VillagerJob job={Job.Farmer} villagers={villagers} selectedVillager={selectedVillager} onChangeSelectedVillager={onSelectedVillagerChange} />
-                    <VillagerJob job={Job.Soldier} villagers={villagers} selectedVillager={selectedVillager} onChangeSelectedVillager={onSelectedVillagerChange} />
-                    <VillagerJob job={Job.Doctor} villagers={villagers} selectedVillager={selectedVillager} onChangeSelectedVillager={onSelectedVillagerChange} />
-                    <VillagerJob job={Job.Unemployed} villagers={villagers} selectedVillager={selectedVillager} onChangeSelectedVillager={onSelectedVillagerChange} />
+                    <VillagerJob job={Job.Farmer()} villagers={villagers} selectedVillager={selectedVillager} onChangeSelectedVillager={onSelectedVillagerChange} />
+                    <VillagerJob job={Job.Soldier()} villagers={villagers} selectedVillager={selectedVillager} onChangeSelectedVillager={onSelectedVillagerChange} />
+                    <VillagerJob job={Job.Doctor()} villagers={villagers} selectedVillager={selectedVillager} onChangeSelectedVillager={onSelectedVillagerChange} />
+                    <VillagerJob job={Job.Unemployed()} villagers={villagers} selectedVillager={selectedVillager} onChangeSelectedVillager={onSelectedVillagerChange} />
                 </div>
             </div>
             <div className="flex flex-col items-center justify-center gap-12 h-full w-1/4">
