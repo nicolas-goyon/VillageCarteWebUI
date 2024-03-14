@@ -31,7 +31,16 @@ export default class Creature{
         return this._damage;
     }
 
-    static Goblin = new Creature("Goblin", Goblin, 10, 2);
-    static Orc = new Creature("Orc", Orc, 30, 5);
-    static Snake = new Creature("Snake", Snake, 3, 15);
+    set name(name: string) {
+        this._name = name;
+    }
+
+    set health(health: number) {
+        this._health = health;
+    }
+
+
+    static Goblin = new Creature("Goblin", Goblin, 10, 3);
+    static Orc = new Creature("Orc", Orc, 50, 20);
+    static Snake = new Creature("Snake", Snake, 5, 10);
 }
