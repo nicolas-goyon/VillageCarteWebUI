@@ -1,5 +1,5 @@
 # Use an official Node runtime as a builder stage
-FROM node:14 as builder
+FROM node:21 as builder
 
 # Set the working directory in the container to /app
 WORKDIR /app
@@ -16,11 +16,13 @@ COPY . .
 # Build the app
 RUN npm run build
 
+RUN ls -la
+
 # Use Nginx for serving the build files
 FROM nginx:1.17.1-alpine
 
 # Copy the build files from builder stage
-COPY --from=builder /app/build /usr/share/nginx/html
+COPY --from=builder /app/dist /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80

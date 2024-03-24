@@ -5,13 +5,13 @@ import Creature from '../Logic/Creature'
 
 describe('DataHandlers', () => {
     test('foodProduced event', () => {
-        const villagersState = { villagers: [], setVillagers: (villagers: any) => { } }
+        const villagersState = { villagers: [], setVillagers: (_: any) => { } }
         const foodState = {
             food: 0, setFood: (food: number) => {
                 expect(food).toBe(100)
             }
         }
-        const creatureState = { creatures: [], setCreatures: (creatures: any) => { } }
+        const creatureState = { creatures: [], setCreatures: (_: any) => { } }
         const data = { eventType: "foodProduced", newAmount: 100 }
         const event = new MessageEvent('message', { data: JSON.stringify(data) })
         dh.handleMessages(event, villagersState, foodState, creatureState)
@@ -29,7 +29,7 @@ describe('DataHandlers', () => {
     })
 
     test('foodEaten event', () => {
-        const villagersState = { villagers: [], setVillagers: (villagers: any) => { } }
+        const villagersState = { villagers: [], setVillagers: (_: any) => { } }
         const foodState = {
             food: 0, setFood: (food: number) => {
                 expect(food).toBe(100)
@@ -37,7 +37,7 @@ describe('DataHandlers', () => {
         }
         const data = { eventType: "foodEaten", newAmount: 100, guys: [] }
         const event = new MessageEvent('message', { data: JSON.stringify(data) })
-        dh.handleMessages(event, villagersState, foodState, { creatures: [], setCreatures: (creatures: any) => { } })
+        dh.handleMessages(event, villagersState, foodState, { creatures: [], setCreatures: (_: any) => { } })
     });
 
     test('foodEaten', () => {
@@ -46,7 +46,7 @@ describe('DataHandlers', () => {
                 expect(food).toBe(100)
             }
         }
-        const villagersState = { villagers: [], setVillagers: (villagers: any) => { } }
+        const villagersState = { villagers: [], setVillagers: (_: any) => { } }
         const data = { newAmount: 100, guys: [] }
         const foodEaten = dh.foodEaten(data, foodState, villagersState)
         expect(foodEaten).toBe(undefined)
@@ -60,7 +60,7 @@ describe('DataHandlers', () => {
         }
         const data = { eventType: "newVillager", newGuy: { name: "John", surname: "Doe", job: "Farmer", health: 100, age: 0, stomachSize: 100, baseHealth: 100, workingForce: 1, magic: 0, damage: 0, characteristic: [] } }
         const event = new MessageEvent('message', { data: JSON.stringify(data) })
-        dh.handleMessages(event, villagersState, { food: 0, setFood: (food: number) => { } }, { creatures: [], setCreatures: (creatures: any) => { } })
+        dh.handleMessages(event, villagersState, { food: 0, setFood: (_: number) => { } }, { creatures: [], setCreatures: (_: any) => { } })
     });
 
     test('newVillager', () => {
@@ -82,7 +82,7 @@ describe('DataHandlers', () => {
         }
         const data = { eventType: "newAttack", creatures: [{ name: "Goblin", health: 10, damage: 3 }] }
         const event = new MessageEvent('message', { data: JSON.stringify(data) })
-        dh.handleMessages(event, { villagers: [], setVillagers: (villagers: any) => { } }, { food: 0, setFood: (food: number) => { } }, creatureState)
+        dh.handleMessages(event, { villagers: [], setVillagers: (_: any) => { } }, { food: 0, setFood: (_: number) => { } }, creatureState)
     });
 
     test('newAttack', () => {
@@ -123,7 +123,7 @@ describe('DataHandlers', () => {
 
         const data = { eventType: "attackDamage", guys: [{ name: "John", surname: "Doe", newHealth: 97, targetType: "villager" }] }
         const event = new MessageEvent('message', { data: JSON.stringify(data) })
-        dh.handleMessages(event, villagersState, { food: 0, setFood: (food: number) => { } }, { creatures: [], setCreatures: (creatures: any) => { } })
+        dh.handleMessages(event, villagersState, { food: 0, setFood: (_: number) => { } }, { creatures: [], setCreatures: (_: any) => { } })
     });
 
     test('attackDamage event: Creature', () => {
@@ -136,7 +136,7 @@ describe('DataHandlers', () => {
         }
         const data = { eventType: "attackDamage", guys: [{ name: "Goblin", newHealth: 7, targetType: "creature" }] }
         const event = new MessageEvent('message', { data: JSON.stringify(data) })
-        dh.handleMessages(event, { villagers: [], setVillagers: (villagers: any) => { } }, { food: 0, setFood: (food: number) => { } }, creaturesState)
+        dh.handleMessages(event, { villagers: [], setVillagers: (_: any) => { } }, { food: 0, setFood: (_: number) => { } }, creaturesState)
     });
 
     test('healVillagers event', () => {
@@ -150,7 +150,7 @@ describe('DataHandlers', () => {
 
         const data = { eventType: "healVillagers", guys: [{ name: "John", surname: "Doe", newHealth: 100 }] }
         const event = new MessageEvent('message', { data: JSON.stringify(data) })
-        dh.handleMessages(event, villagersState, { food: 0, setFood: (food: number) => { } }, { creatures: [], setCreatures: (creatures: any) => { } })
+        dh.handleMessages(event, villagersState, { food: 0, setFood: (_: number) => { } }, { creatures: [], setCreatures: (_: any) => { } })
     });
 
 })

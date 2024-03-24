@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import './App.css'
-import VillagerCard from './Components/VillagerCard'
 import { BackendConnexion } from './Logic/BackendConnexion'
 import Game from './Pages/Game'
 import Home from './Pages/Home'

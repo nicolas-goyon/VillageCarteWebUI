@@ -18,7 +18,7 @@ export class BackendConnexion{
     }
 
     public connect(): WebSocket{
-        const socket = new WebSocket("ws://localhost:8080/chat/dkdk")
+        const socket = new WebSocket("ws://apivillage.pgiacc.fr/chat/dkdk")
         socket.onopen = () => {
             console.log("Connected to server")
         }
