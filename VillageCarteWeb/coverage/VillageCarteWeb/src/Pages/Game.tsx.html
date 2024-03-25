@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/74</span>
+                <span class='fraction'>0/72</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/74</span>
+                <span class='fraction'>0/72</span>
             </div>
         
             
@@ -134,11 +134,7 @@
 <a name='L69'></a><a href='#L69'>69</a>
 <a name='L70'></a><a href='#L70'>70</a>
 <a name='L71'></a><a href='#L71'>71</a>
-<a name='L72'></a><a href='#L72'>72</a>
-<a name='L73'></a><a href='#L73'>73</a>
-<a name='L74'></a><a href='#L74'>74</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<a name='L72'></a><a href='#L72'>72</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -245,6 +241,7 @@
 <span class="cstat-no" title="statement not covered" >    const [villagers, setVillagersState] = useState([baseVillager])</span>
 <span class="cstat-no" title="statement not covered" >    const [food, setFood] = useState(baseFood)</span>
 <span class="cstat-no" title="statement not covered" >    const [selectedVillager, setSelectedVillager] = useState(villagers[0])</span>
+<span class="cstat-no" title="statement not covered" >    const [creatures, setCreatures] = useState&lt;Creature[]&gt;([])</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >    const onVillagerChangeJob = (villager: Villager, job: Job) =&gt; {</span>
@@ -260,19 +257,16 @@
 <span class="cstat-no" title="statement not covered" >        setSelectedVillager(villager)</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    const [creatures, setCreatures] = useState&lt;Creature[]&gt;([])</span>
-<span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >    return (</span>
 <span class="cstat-no" title="statement not covered" >        &lt;div className="flex flex-row gap-12 p-2 h-full w-full"&gt;</span>
 <span class="cstat-no" title="statement not covered" >            &lt;VillageDetail selectedVillager={selectedVillager} onChangeJob={onVillagerChangeJob} food={food} numberOfVillagers={villagers.length} /&gt;</span>
 <span class="cstat-no" title="statement not covered" >            &lt;div className="gap-12 h-full w-1/2"&gt;</span>
 <span class="cstat-no" title="statement not covered" >                {/* 4 zones, top left, top right, bottom left and bottom right */}</span>
 <span class="cstat-no" title="statement not covered" >                &lt;div className="grid grid-cols-2 grid-rows-2 gap-4 h-full"&gt;</span>
-<span class="cstat-no" title="statement not covered" >                    &lt;VillagerJob job={Job.Farmer} villagers={villagers} selectedVillager={selectedVillager} onChangeSelectedVillager={onSelectedVillagerChange} /&gt;</span>
-<span class="cstat-no" title="statement not covered" >                    &lt;VillagerJob job={Job.Soldier} villagers={villagers} selectedVillager={selectedVillager} onChangeSelectedVillager={onSelectedVillagerChange} /&gt;</span>
-<span class="cstat-no" title="statement not covered" >                    &lt;VillagerJob job={Job.Doctor} villagers={villagers} selectedVillager={selectedVillager} onChangeSelectedVillager={onSelectedVillagerChange} /&gt;</span>
-<span class="cstat-no" title="statement not covered" >                    &lt;VillagerJob job={Job.Unemployed} villagers={villagers} selectedVillager={selectedVillager} onChangeSelectedVillager={onSelectedVillagerChange} /&gt;</span>
+<span class="cstat-no" title="statement not covered" >                    &lt;VillagerJob job={Job.Farmer()} villagers={villagers} selectedVillager={selectedVillager} onChangeSelectedVillager={onSelectedVillagerChange} /&gt;</span>
+<span class="cstat-no" title="statement not covered" >                    &lt;VillagerJob job={Job.Soldier()} villagers={villagers} selectedVillager={selectedVillager} onChangeSelectedVillager={onSelectedVillagerChange} /&gt;</span>
+<span class="cstat-no" title="statement not covered" >                    &lt;VillagerJob job={Job.Doctor()} villagers={villagers} selectedVillager={selectedVillager} onChangeSelectedVillager={onSelectedVillagerChange} /&gt;</span>
+<span class="cstat-no" title="statement not covered" >                    &lt;VillagerJob job={Job.Unemployed()} villagers={villagers} selectedVillager={selectedVillager} onChangeSelectedVillager={onSelectedVillagerChange} /&gt;</span>
 <span class="cstat-no" title="statement not covered" >                &lt;/div&gt;</span>
 <span class="cstat-no" title="statement not covered" >            &lt;/div&gt;</span>
 <span class="cstat-no" title="statement not covered" >            &lt;div className="flex flex-col items-center justify-center gap-12 h-full w-1/4"&gt;</span>
@@ -289,7 +283,7 @@
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2024-03-14T12:33:37.919Z
+                at 2024-03-25T09:06:28.290Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

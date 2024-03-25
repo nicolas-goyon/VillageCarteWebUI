@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1710419618028" clover="3.2.0">
-  <project timestamp="1710419618029" name="All files">
-    <metrics statements="1018" coveredstatements="374" conditionals="90" coveredconditionals="53" methods="56" coveredmethods="37" elements="1164" coveredelements="464" complexity="0" loc="1018" ncloc="1018" packages="5" files="19" classes="19"/>
+<coverage generated="1711357588441" clover="3.2.0">
+  <project timestamp="1711357588442" name="All files">
+    <metrics statements="1014" coveredstatements="374" conditionals="92" coveredconditionals="55" methods="63" coveredmethods="39" elements="1169" coveredelements="468" complexity="0" loc="1014" ncloc="1014" packages="5" files="19" classes="19"/>
     <package name="VillageCarteWeb">
       <metrics statements="17" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="postcss.config.js" path="C:\Users\nico_\OneDrive\Documents\GitHub\VillageCarteWebUI\VillageCarteWeb\postcss.config.js">
@@ -29,9 +29,9 @@
       </file>
     </package>
     <package name="VillageCarteWeb.src">
-      <metrics statements="65" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="63" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="App.tsx" path="C:\Users\nico_\OneDrive\Documents\GitHub\VillageCarteWebUI\VillageCarteWeb\src\App.tsx">
-        <metrics statements="55" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="54" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -86,10 +86,9 @@
         <line num="52" count="0" type="stmt"/>
         <line num="53" count="0" type="stmt"/>
         <line num="54" count="0" type="stmt"/>
-        <line num="55" count="0" type="stmt"/>
       </file>
       <file name="main.tsx" path="C:\Users\nico_\OneDrive\Documents\GitHub\VillageCarteWebUI\VillageCarteWeb\src\main.tsx">
-        <metrics statements="10" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="9" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -99,7 +98,6 @@
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
-        <line num="10" count="0" type="stmt"/>
       </file>
     </package>
     <package name="VillageCarteWeb.src.Components">
@@ -431,7 +429,7 @@
       </file>
     </package>
     <package name="VillageCarteWeb.src.Logic">
-      <metrics statements="538" coveredstatements="374" conditionals="77" coveredconditionals="53" methods="43" coveredmethods="37"/>
+      <metrics statements="538" coveredstatements="374" conditionals="79" coveredconditionals="55" methods="50" coveredmethods="39"/>
       <file name="BackendConnexion.ts" path="C:\Users\nico_\OneDrive\Documents\GitHub\VillageCarteWebUI\VillageCarteWeb\src\Logic\BackendConnexion.ts">
         <metrics statements="69" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
@@ -505,53 +503,53 @@
         <line num="69" count="0" type="stmt"/>
       </file>
       <file name="Creature.ts" path="C:\Users\nico_\OneDrive\Documents\GitHub\VillageCarteWebUI\VillageCarteWeb\src\Logic\Creature.ts">
-        <metrics statements="46" coveredstatements="42" conditionals="7" coveredconditionals="7" methods="9" coveredmethods="7"/>
+        <metrics statements="46" coveredstatements="42" conditionals="8" coveredconditionals="8" methods="12" coveredmethods="8"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="6" count="3" type="stmt"/>
-        <line num="7" count="3" type="stmt"/>
-        <line num="8" count="3" type="stmt"/>
-        <line num="9" count="3" type="stmt"/>
-        <line num="10" count="3" type="stmt"/>
-        <line num="11" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="12" count="3" type="stmt"/>
-        <line num="13" count="3" type="stmt"/>
-        <line num="14" count="3" type="stmt"/>
-        <line num="15" count="3" type="stmt"/>
-        <line num="16" count="3" type="stmt"/>
-        <line num="17" count="3" type="stmt"/>
-        <line num="18" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="14" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="14" type="stmt"/>
+        <line num="7" count="14" type="stmt"/>
+        <line num="8" count="14" type="stmt"/>
+        <line num="9" count="14" type="stmt"/>
+        <line num="10" count="14" type="stmt"/>
+        <line num="11" count="14" type="cond" truecount="1" falsecount="0"/>
+        <line num="12" count="14" type="stmt"/>
+        <line num="13" count="14" type="stmt"/>
+        <line num="14" count="14" type="stmt"/>
+        <line num="15" count="14" type="stmt"/>
+        <line num="16" count="14" type="stmt"/>
+        <line num="17" count="14" type="stmt"/>
+        <line num="18" count="14" type="cond" truecount="1" falsecount="0"/>
         <line num="19" count="1" type="stmt"/>
         <line num="20" count="1" type="stmt"/>
-        <line num="21" count="3" type="stmt"/>
-        <line num="22" count="3" type="stmt"/>
+        <line num="21" count="14" type="stmt"/>
+        <line num="22" count="14" type="stmt"/>
         <line num="23" count="0" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
-        <line num="25" count="3" type="stmt"/>
-        <line num="26" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="25" count="14" type="stmt"/>
+        <line num="26" count="14" type="cond" truecount="1" falsecount="0"/>
         <line num="27" count="1" type="stmt"/>
         <line num="28" count="1" type="stmt"/>
-        <line num="29" count="3" type="stmt"/>
-        <line num="30" count="3" type="stmt"/>
+        <line num="29" count="14" type="stmt"/>
+        <line num="30" count="14" type="stmt"/>
         <line num="31" count="0" type="stmt"/>
         <line num="32" count="0" type="stmt"/>
-        <line num="33" count="3" type="stmt"/>
-        <line num="34" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="35" count="2" type="stmt"/>
-        <line num="36" count="2" type="stmt"/>
-        <line num="37" count="3" type="stmt"/>
-        <line num="38" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="33" count="14" type="stmt"/>
+        <line num="34" count="14" type="cond" truecount="1" falsecount="0"/>
+        <line num="35" count="6" type="stmt"/>
+        <line num="36" count="6" type="stmt"/>
+        <line num="37" count="14" type="stmt"/>
+        <line num="38" count="14" type="cond" truecount="1" falsecount="0"/>
         <line num="39" count="2" type="stmt"/>
         <line num="40" count="2" type="stmt"/>
-        <line num="41" count="3" type="stmt"/>
-        <line num="42" count="3" type="stmt"/>
-        <line num="43" count="3" type="stmt"/>
-        <line num="44" count="3" type="stmt"/>
-        <line num="45" count="3" type="cond" truecount="1" falsecount="0"/>
-        <line num="46" count="3" type="stmt"/>
+        <line num="41" count="14" type="stmt"/>
+        <line num="42" count="14" type="stmt"/>
+        <line num="43" count="14" type="cond" truecount="1" falsecount="0"/>
+        <line num="44" count="14" type="stmt"/>
+        <line num="45" count="14" type="cond" truecount="1" falsecount="0"/>
+        <line num="46" count="14" type="stmt"/>
       </file>
       <file name="DataHandlers.ts" path="C:\Users\nico_\OneDrive\Documents\GitHub\VillageCarteWebUI\VillageCarteWeb\src\Logic\DataHandlers.ts">
         <metrics statements="187" coveredstatements="167" conditionals="33" coveredconditionals="26" methods="10" coveredmethods="10"/>
@@ -646,29 +644,29 @@
         <line num="89" count="2" type="stmt"/>
         <line num="90" count="1" type="stmt"/>
         <line num="91" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="92" count="2" type="stmt"/>
-        <line num="93" count="2" type="cond" truecount="1" falsecount="0"/>
-        <line num="94" count="2" type="stmt"/>
-        <line num="95" count="2" type="stmt"/>
-        <line num="96" count="2" type="stmt"/>
-        <line num="97" count="2" type="stmt"/>
-        <line num="98" count="2" type="stmt"/>
-        <line num="99" count="2" type="stmt"/>
-        <line num="100" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="92" count="3" type="stmt"/>
+        <line num="93" count="3" type="cond" truecount="1" falsecount="0"/>
+        <line num="94" count="4" type="stmt"/>
+        <line num="95" count="4" type="stmt"/>
+        <line num="96" count="4" type="stmt"/>
+        <line num="97" count="4" type="stmt"/>
+        <line num="98" count="4" type="stmt"/>
+        <line num="99" count="4" type="stmt"/>
+        <line num="100" count="4" type="cond" truecount="0" falsecount="1"/>
         <line num="101" count="0" type="stmt"/>
         <line num="102" count="0" type="stmt"/>
-        <line num="103" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="103" count="4" type="cond" truecount="0" falsecount="1"/>
         <line num="104" count="0" type="stmt"/>
         <line num="105" count="0" type="stmt"/>
-        <line num="106" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="106" count="4" type="cond" truecount="0" falsecount="1"/>
         <line num="107" count="0" type="stmt"/>
-        <line num="108" count="2" type="stmt"/>
-        <line num="109" count="2" type="stmt"/>
-        <line num="110" count="2" type="stmt"/>
-        <line num="111" count="2" type="stmt"/>
-        <line num="112" count="2" type="stmt"/>
-        <line num="113" count="2" type="stmt"/>
-        <line num="114" count="2" type="stmt"/>
+        <line num="108" count="4" type="stmt"/>
+        <line num="109" count="4" type="stmt"/>
+        <line num="110" count="4" type="stmt"/>
+        <line num="111" count="3" type="stmt"/>
+        <line num="112" count="3" type="stmt"/>
+        <line num="113" count="3" type="stmt"/>
+        <line num="114" count="3" type="stmt"/>
         <line num="115" count="1" type="stmt"/>
         <line num="116" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="117" count="2" type="stmt"/>
@@ -788,34 +786,34 @@
         <line num="41" count="0" type="stmt"/>
       </file>
       <file name="Job.ts" path="C:\Users\nico_\OneDrive\Documents\GitHub\VillageCarteWebUI\VillageCarteWeb\src\Logic\Job.ts">
-        <metrics statements="43" coveredstatements="35" conditionals="8" coveredconditionals="4" methods="6" coveredmethods="4"/>
+        <metrics statements="43" coveredstatements="35" conditionals="9" coveredconditionals="5" methods="10" coveredmethods="5"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="6" count="4" type="stmt"/>
-        <line num="7" count="4" type="stmt"/>
-        <line num="8" count="4" type="stmt"/>
-        <line num="9" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="10" count="4" type="stmt"/>
-        <line num="11" count="4" type="stmt"/>
-        <line num="12" count="4" type="stmt"/>
-        <line num="13" count="4" type="stmt"/>
-        <line num="14" count="4" type="stmt"/>
+        <line num="5" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="8" type="stmt"/>
+        <line num="7" count="8" type="stmt"/>
+        <line num="8" count="8" type="stmt"/>
+        <line num="9" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="8" type="stmt"/>
+        <line num="11" count="8" type="stmt"/>
+        <line num="12" count="8" type="stmt"/>
+        <line num="13" count="8" type="stmt"/>
+        <line num="14" count="8" type="stmt"/>
         <line num="15" count="0" type="stmt"/>
         <line num="16" count="0" type="stmt"/>
-        <line num="17" count="4" type="stmt"/>
-        <line num="18" count="4" type="stmt"/>
+        <line num="17" count="8" type="stmt"/>
+        <line num="18" count="8" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
-        <line num="21" count="4" type="stmt"/>
-        <line num="22" count="4" type="stmt"/>
-        <line num="23" count="4" type="stmt"/>
-        <line num="24" count="4" type="stmt"/>
-        <line num="25" count="4" type="cond" truecount="1" falsecount="0"/>
-        <line num="26" count="4" type="stmt"/>
-        <line num="27" count="4" type="cond" truecount="1" falsecount="0"/>
+        <line num="21" count="8" type="stmt"/>
+        <line num="22" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="23" count="8" type="stmt"/>
+        <line num="24" count="8" type="stmt"/>
+        <line num="25" count="8" type="cond" truecount="1" falsecount="0"/>
+        <line num="26" count="8" type="stmt"/>
+        <line num="27" count="8" type="cond" truecount="1" falsecount="0"/>
         <line num="28" count="2" type="stmt"/>
         <line num="29" count="2" type="stmt"/>
         <line num="30" count="2" type="stmt"/>
@@ -831,7 +829,7 @@
         <line num="40" count="0" type="stmt"/>
         <line num="41" count="2" type="stmt"/>
         <line num="42" count="2" type="stmt"/>
-        <line num="43" count="4" type="stmt"/>
+        <line num="43" count="8" type="stmt"/>
       </file>
       <file name="Villager.ts" path="C:\Users\nico_\OneDrive\Documents\GitHub\VillageCarteWebUI\VillageCarteWeb\src\Logic\Villager.ts">
         <metrics statements="152" coveredstatements="130" conditionals="27" coveredconditionals="16" methods="16" coveredmethods="16"/>
@@ -990,9 +988,9 @@
       </file>
     </package>
     <package name="VillageCarteWeb.src.Pages">
-      <metrics statements="94" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+      <metrics statements="92" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="Game.tsx" path="C:\Users\nico_\OneDrive\Documents\GitHub\VillageCarteWebUI\VillageCarteWeb\src\Pages\Game.tsx">
-        <metrics statements="74" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <metrics statements="72" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="0" type="cond" truecount="0" falsecount="1"/>
         <line num="2" count="0" type="stmt"/>
         <line num="3" count="0" type="stmt"/>
@@ -1065,8 +1063,6 @@
         <line num="70" count="0" type="stmt"/>
         <line num="71" count="0" type="stmt"/>
         <line num="72" count="0" type="stmt"/>
-        <line num="73" count="0" type="stmt"/>
-        <line num="74" count="0" type="stmt"/>
       </file>
       <file name="Home.tsx" path="C:\Users\nico_\OneDrive\Documents\GitHub\VillageCarteWebUI\VillageCarteWeb\src\Pages\Home.tsx">
         <metrics statements="20" coveredstatements="0" conditionals="1" coveredconditionals="0" methods="1" coveredmethods="0"/>
